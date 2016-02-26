@@ -30,4 +30,4 @@
      |     |      |          └── index.js
      |     |      |          └── index.css
      |     |      |---fis-conf.js #fis配置文件
-
+    var make=rr;
