@@ -44,7 +44,7 @@
 
 4、现在便可以在相应目录下分别开发出自己需要的文件，这里开发的是google的主页
 
-<img src='/imgs/img4.png' width='100px'>
+<img src='/imgs/img4.png' width='300px' border="1px solid #bcbcbc">
 
 5、首先需要建立整个项目都有用到的模版layout.tpl，放在common—>page中，｛%block name=“block_head_static”%}用于加载页面中需要的js\css文件，｛％block name=“content”％｝用于加载页面的内容。
 
