@@ -30,4 +30,7 @@
      |     |      |          └── index.js
      |     |      |          └── index.css
      |     |      |---fis-conf.js #fis配置文件
-    var make=rr;
+   <pre><code>tell application "Foo"
+    beep
+end tell
+</code></pre> var make=rr;
