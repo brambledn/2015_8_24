@@ -31,4 +31,5 @@
   |     |      |          └── index.css
   |     |      |---fis-conf.js #fis配置文件</code></pre>
 1、建立主目录google-index，并在其下建立通用系统目录common,以及业务目录（此处是home）（注：可直接在phpstrom或其他编辑器中建立项目，以及其他文件及目录）
+
 ![Alt text](/imgs/img1.png)
