@@ -117,6 +117,7 @@
 
 10.到了此时，项目并没有结束，还需要配置fis-conf.js文件进行文件的打包或压缩等，可以防止后期因为缓存无法得到预期页面。
 11.项目架构已经大致出现，现在便可以进入终端发布项目并启动进行调试。再次进入终端，进入到google-index目录下，执行如下命令，发布并启动项目。
+
     $ fisp release -r common
     $ fisp release -r home
     $ fisp server start
