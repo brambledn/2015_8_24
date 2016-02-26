@@ -50,19 +50,19 @@
 
 ![Alt text](/imgs/img5.png)
 
-<pre><code>/* layout.tpl*/
-<!DOCTYPE html> 
-{%html framework="common:static/mod.js" class="expanded"%}         
-  {%head%}            
-    <meta charset="utf-8"/>             
-    <meta content="" name="description">
-    <title>google-index</title>
-    {%block name="block_head_static"%}{%/block%}
-  {%/head%}         
-  {%body%}
-    {%block name="content"%}{%/block%}         
-  {%/body%}
-{%/html%}</code></pre>
+    /* layout.tpl*/
+    <!DOCTYPE html>
+    {%html framework="common:static/mod.js" class="expanded"%}        
+      {%head%}
+        <meta charset="utf-8"/>
+        <meta content="" name="description">
+        <title>google-index</title>
+        {%block name="block_head_static"%}{%/block%}
+      {%/head%}
+      {%body%}
+        {%block name="content"%}{%/block%}
+      {%/body%}
+    {%/html%}
 
 6、在做google主页中，我们将顶端的Gmail/图片部分当作通用导航组件，则将其放到common—>widget目录中
 
@@ -84,41 +84,41 @@
 
 ![Alt text](/imgs/img7.png)
 
-<pre><code>/* logo.tpl*/
-<section class="logo-container">
-  <div class="img-container">
-    <img src="googlelogo_color_272x92dp.png">
-  </div>
-  <div class="region">
-    <span>Japan</span>
-  </div>
-</section></code></pre>
+    /* logo.tpl*/
+    <section class="logo-container">
+      <div class="img-container">
+        <img src="googlelogo_color_272x92dp.png">
+      </div>
+      <div class="region">
+        <span>Japan</span>
+      </div>
+    </section>
 
 8.之后，将搜索栏部分同样整合成一个组件，在此不再赘述。
 9.我们已经将页面分成了各个部分／组件，还记得之前layout.tpl模版中设置的｛％block％｝吗？现在便是将其中的block“填充”上内容。在代码中我们可以看到分别有name为block_head_static、content的块，在content中，我们分别引入了nav.tpl/logo.tpl文件。
 
 ![Alt text](/imgs/img8.png)
 
-<pre><code>/* index.tpl*/
-{%extends file="common/page/layout.tpl"%}
-{%block name=“block_head_static"%}
-  {%require name="home:static/index.css"%}
-{%/block%}
-{%block name="content"%}
-  <div id="wrapper">
-    <div id="sidebar">
-      {%widget name="common:widget/nav/nav.tpl"%}
-    </div>
-    <div id="container">
-      {%widget name="home:widget/logo/logo.tpl"%}
-    </div>
-  </div>
-{%/block%}</code></pre>
+    /* index.tpl*/
+    {%extends file="common/page/layout.tpl"%}
+    {%block name=“block_head_static"%}
+      {%require name="home:static/index.css"%}
+    {%/block%}
+    {%block name="content"%}
+      <div id="wrapper">
+        <div id="sidebar">
+          {%widget name="common:widget/nav/nav.tpl"%}
+        </div>
+        <div id="container">
+          {%widget name="home:widget/logo/logo.tpl"%}
+        </div>
+      </div>
+    {%/block%}
 
 10.到了此时，项目并没有结束，还需要配置fis-conf.js文件进行文件的打包或压缩等，可以防止后期因为缓存无法得到预期页面。
 11.项目架构已经大致出现，现在便可以进入终端发布项目并启动进行调试。再次进入终端，进入到google-index目录下，执行如下命令，发布并启动项目。
-<pre><code>$ fisp release -r common
-$ fisp release -r home
-$ fisp server start</code></pre>
+    $ fisp release -r common
+    $ fisp release -r home
+    $ fisp server start
 
 
