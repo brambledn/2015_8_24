@@ -68,17 +68,17 @@
 
 ![Alt text](/imgs/img6.png)
 
-<pre><code>/* nav.tpl*/
+    /* nav.tpl*/
     <nav id="nav" class="navigation" role="navigation">
-    <ul>
-    <li class="active">
-      <a>Gmail</a>
-    </li>
-    <li>
-      <a>图片</a>
-    </li>
-    </ul>
-    </nav>`</code></pre>
+      <ul>
+        <li class="active">
+          <a>Gmail</a>
+        </li>
+        <li>
+          <a>图片</a>
+        </li>
+      </ul>
+    </nav>
 
 7.将goole logo与japan合成一个组件，放入到业务模块home—>widget中，
 
